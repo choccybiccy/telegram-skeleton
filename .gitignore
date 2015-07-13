@@ -1,0 +1,5 @@
+/vendor/
+/.idea/
+/src/Resources/config/parameters.yml
+/.env
+

@@ -18,14 +18,18 @@ class HelloWorldCommand extends Command
      * @param string $argument
      * @param Message $message
      * @return void
+     * @throws \Exception
      */
     protected function execute($argument, Message $message)
     {
 
-        $this->getApiClient()->sendMessage(
-            $message->chat->id,
-            "Hello World"
-        );
+        try {
+
+            $this->getApiClient()->sendMessage($message->chat->id, "Hello World");
+
+        } catch(\Exception $e) {
+            throw new \Exception("Couldn't send the message.");
+        }
 
     }
 }

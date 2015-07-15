@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "65d6fe9e89a328e317df405eecc4f0c2",
+    "hash": "4294045fd7ecbea44dd56689246d40e0",
     "packages": [
         {
             "name": "choccybiccy/telegrambot",
@@ -359,91 +359,6 @@
                 "router"
             ],
             "time": "2015-03-08 18:41:17"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "v2.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9808e75c609a14f6db02f70fccf4ca4aab53c160",
-                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Yaml\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-06-10 15:30:22"
-        },
-        {
-            "name": "techsterx/slim-config-yaml",
-            "version": "v1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/techsterx/slim-config-yaml.git",
-                "reference": "e43439aa3c50120c395f134e1ed45850481f3903"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/techsterx/slim-config-yaml/zipball/e43439aa3c50120c395f134e1ed45850481f3903",
-                "reference": "e43439aa3c50120c395f134e1ed45850481f3903",
-                "shasum": ""
-            },
-            "require": {
-                "slim/slim": "2.*",
-                "symfony/yaml": "^2.4.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "BurningDiode\\Slim\\Config\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Rex",
-                    "email": "rexw3035@gmail.com"
-                }
-            ],
-            "time": "2015-04-13 21:40:40"
         }
     ],
     "packages-dev": [
@@ -1347,6 +1262,91 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2015-06-21 13:59:46"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "~2.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.7-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2015-06-10 15:30:22"
+        },
+        {
+            "name": "techsterx/slim-config-yaml",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/techsterx/slim-config-yaml.git",
+                "reference": "e43439aa3c50120c395f134e1ed45850481f3903"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/techsterx/slim-config-yaml/zipball/e43439aa3c50120c395f134e1ed45850481f3903",
+                "reference": "e43439aa3c50120c395f134e1ed45850481f3903",
+                "shasum": ""
+            },
+            "require": {
+                "slim/slim": "2.*",
+                "symfony/yaml": "^2.4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BurningDiode\\Slim\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Rex",
+                    "email": "rexw3035@gmail.com"
+                }
+            ],
+            "time": "2015-04-13 21:40:40"
         }
     ],
     "aliases": [],

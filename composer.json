@@ -3,8 +3,8 @@
     "description": "A skeleton app for Telegram bot development. Make better bots.",
     "require": {
         "josegonzalez/dotenv": "^1.0",
-        "techsterx/slim-config-yaml": "^1.0",
-        "choccybiccy/telegrambot": "^0.2.0"
+        "choccybiccy/telegrambot": "^0.2.0",
+        "slim/slim": "^2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.7"

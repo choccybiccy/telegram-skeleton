@@ -9,4 +9,5 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 * Created bot application
 * Created 'Hello World' command
 * Added this changelog
-
+* Unit tests
+* Added [README.md]

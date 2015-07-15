@@ -2,8 +2,10 @@
 
 namespace App;
 
+use App\Command\HelloWorldCommand;
 use Choccybiccy\Telegram\ApiClient;
 use Choccybiccy\Telegram\CommandHandler;
+use Choccybiccy\Telegram\Entity\Message;
 use Choccybiccy\Telegram\Entity\Update;
 use josegonzalez\Dotenv\Loader;
 use Slim\Slim;
@@ -35,28 +37,64 @@ $app->post("/webhook", function () use ($app) {
     $update = $app->telegram->entityFromBody(
         $app->request->getBody(), new Update()
     );
-    $handler = new CommandHandler($app->telegram);
-    $handler->run($update);
+    if($update->message instanceof Message) {
+        try {
 
+            // Register your commands here
+            $handler = new CommandHandler($app->telegram);
+            $handler->register(new HelloWorldCommand("hello"));
+            $handler->run($update);
+
+
+        } catch(\Exception $e) {
+            echo $e->getMessage();
+            $app->response()->setStatus(500);
+        }
+    } else {
+        echo "Couldn't find the Message in the body.";
+        $app->response()->setStatus(400);
+    }
 })->name("webhook");
 
 
 
 /**
  * Install webhook with Telegram API. Uses the current url and "webhook" route.
+ * POST to this URL to install your webhook with Telegram.
+ *
+ * Note: Telegram requires your webhooks to use HTTPS.
+ *
+ * For example:
+ *
+ * POST https://bot.mydomain.com/install HTTP/1.1
  */
 $app->post("/install", function () use ($app) {
     $url = $app->request()->getUrl() . $app->urlFor("webhook");
-    $app->telegram->setWebhook($url);
+    try {
+        $app->telegram->setWebhook($url);
+    } catch(\Exception $e) {
+        echo "Couldn't set the webhook. Have you set the bot auth token correctly?";
+        $app->response()->setStatus(403);
+    }
 });
 
 
 
 /**
- * Uninstall the webhook by sending a blank URL
+ * Uninstall the webhook by sending a blank URL. Post to this URL to uninstall
+ * your webhook.
+ *
+ * For example:
+ *
+ * POST https://bot.mydomain.com/uninstall HTTP/1.1
  */
 $app->post("/uninstall", function () use ($app) {
-    $app->telegram->setWebhook("");
+    try {
+        $app->telegram->setWebhook("");
+    } catch(\Exception $e) {
+        echo "Couldn't set the webhook. Have you set the bot auth token correctly?";
+        $app->response()->setStatus(403);
+    }
 });
 
 
